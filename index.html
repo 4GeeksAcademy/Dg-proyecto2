@@ -1,169 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DIANA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
-    
-</head>
-    <style> 
-        .fa-table-cells{
-            outline: none;
-            box-shadow: none;
-        }
-    </style>
+</head> 
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-light bg-light py-3">
         <div class="container-fluid">
             <div class="d-flex w-100 justify-content-between">
-                <div class="navbar-brand d-flex align-items-center" href="#">
-                    <i class="fa-brands fa-instagram mr-1"></i>
-                    <span class="ms-2 fs-3 mb-auto">Instagram</span>
+                <div>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <h5 class="d-inline-block fs-5">Instagram</h5>
                 </div>
-            </div>
-            <div class="d-flex align-right justify-content-end">
-                <ul class="navbar-nav align-items-center">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">
-                            <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Create a new post
-                            </button>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-gear"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                <div class="d-flex align-right justify-content-end">
+                    <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gears"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
                             <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
                         </ul>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active overflow-hidden" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="row">
+                <div class="col-4 p-1">
+                    <img style="height: 30vw; object-fit: cover;" src="https://images.unsplash.com/photo-1708798477023-e60bb59badd6?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid w-100" alt="">
                 </div>
-                <div class="modal-body">
-                    <h6>Caption:</h6>
-                    <textarea class="form-control" placeholder="Add the caption of your post here" id="floatingTextarea2"></textarea>
-                    <div class="icon-buttons p-2">
-                        <button class="border rounded p-1 m-1 btn-light">
-                            <i class="fa-solid fa-camera" aria-hidden="true"></i>
-                        </button>
-                        <button class="border rounded p-1 m-1 btn-light">
-                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        </button>
-                    </div>
+                <div class="col-4 p-1">
+                    <img style="height: 30vw; object-fit: cover;" src="https://images.unsplash.com/32/RgJQ82pETlKd0B7QzcJO_5912578701_92397ba76c_b.jpg?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid w-100" alt="">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Publish</button>
+                <div class="col-4 p-1">
+                    <img style="height: 30vw; object-fit: cover;" src="https://static.wikia.nocookie.net/kpop/images/5/5b/BLACKPINK_%22Shut_Down%22_group_promotional_photo.png/revision/latest?cb=20230212214710" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 p-1">
+                    <img style="height: 30vw; object-fit: cover;" src="https://images.unsplash.com/photo-1708798477023-e60bb59badd6?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid w-100" alt="">
+                </div>
+                <div class="col-4 p-1">
+                    <img style="height: 30vw; object-fit: cover;" src="https://images.unsplash.com/32/RgJQ82pETlKd0B7QzcJO_5912578701_92397ba76c_b.jpg?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid w-100" alt="">
+                </div>
+                <div class="col-4 p-1">
+                    <img style="height: 30vw; object-fit: cover;" src="https://static.wikia.nocookie.net/kpop/images/5/5b/BLACKPINK_%22Shut_Down%22_group_promotional_photo.png/revision/latest?cb=20230212214710" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 p-1">
+                    <img style="height: 30vw; object-fit: cover;" src="https://images.unsplash.com/photo-1708798477023-e60bb59badd6?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid w-100" alt="">
+                </div>
+                <div class="col-4 p-1">
+                    <img style="height: 30vw; object-fit: cover;" src="https://images.unsplash.com/32/RgJQ82pETlKd0B7QzcJO_5912578701_92397ba76c_b.jpg?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid w-100" alt="">
+                </div>
+                <div class="col-4 p-1">
+                    <img style="height: 30vw; object-fit: cover;" src="https://static.wikia.nocookie.net/kpop/images/5/5b/BLACKPINK_%22Shut_Down%22_group_promotional_photo.png/revision/latest?cb=20230212214710" class="img-fluid w-100" alt="">
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid-2">
-        <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-table-cells"></i></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button type="button" class="btn btn-outline-secondary"><i class="fa-sharp-duotone fa-solid fa-square-full"></i></button>
-            </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"aria-labelledby="pills-home-tab">
-                <div class="row">
-                        <div class="col-4 p-1">
-                            <img src="https://cdn.pixabay.com/photo/2016/09/18/20/47/football-1678992_1280.jpg" class="img-thumbnail" alt="...">
-                        </div>
-                        <div class="col-4 p-1">
-                            <img src="https://randomwordgenerator.com/img/picture-generator/57e8dd454355a914f1dc8460962e33791c3ad6e04e507440742f7cd0914fc3_640.jpg" class="rounded mx-auto d-block" alt="...">
-                        </div>
-                        <div class="col-4 p-1">
-                            <img src="https://randomwordgenerator.com/img/picture-generator/54e2d3414950a914f1dc8460962e33791c3ad6e04e5074417d2e72d29e4ecd_640.jpg" class="rounded float-end" alt="...">
-                        </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 p-1">
-                        <img src="https://cdn.pixabay.com/photo/2016/09/18/20/47/football-1678992_1280.jpg" class="img-thumbnail" alt="...">
-                    </div>
-                    <div class="col-4 p-1">
-                        <img src="https://randomwordgenerator.com/img/picture-generator/57e8dd454355a914f1dc8460962e33791c3ad6e04e507440742f7cd0914fc3_640.jpg" class="rounded mx-auto d-block" alt="...">
-                    </div>
-                    <div class="col-4 p-1">
-                        <img src="https://randomwordgenerator.com/img/picture-generator/54e2d3414950a914f1dc8460962e33791c3ad6e04e5074417d2e72d29e4ecd_640.jpg" class="rounded float-end" alt="...">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 p-1">
-                        <img src="https://cdn.pixabay.com/photo/2016/09/18/20/47/football-1678992_1280.jpg" class="img-thumbnail" alt="...">
-                    </div>
-                    <div class="col-4 p-1">
-                        <img src="https://randomwordgenerator.com/img/picture-generator/57e8dd454355a914f1dc8460962e33791c3ad6e04e507440742f7cd0914fc3_640.jpg" class="rounded mx-auto d-block" alt="...">
-                    </div>
-                    <div class="col-4 p-1">
-                        <img src="https://randomwordgenerator.com/img/picture-generator/54e2d3414950a914f1dc8460962e33791c3ad6e04e5074417d2e72d29e4ecd_640.jpg" class="rounded float-end" alt="...">
-                    </div>
-                </div>
-           </div>
-       </div>
-    </div>
-</div>
-     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-         <div class="tab-pane fade overflow-hidden active show" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
-               <div class="row">
-                    <div class="col-6 mx-auto border rounded p-0">
-                          <p>My Crazy Dog Spark!</p>
-                          <div class="d-flex justify-content-center">8/26</div>
-                         <img src="https://cdn.pixabay.com/photo/2016/09/18/20/47/football-1678992_1280.jpg" class="img-fluid" alt="Responsive image"> 
-                         <p class="card-text">With supporting text below as a natural lead-in to additional content</p>
-                         <h5 class="card-title">Special title treatment</h5>
-                      </div>
-                </div>
-           </div>
-     </div>
-</div>
-</div>
-    <div class="tab-pane fade overflow-hidden active show" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
-        <div class="row">
+
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"> 
             <div class="col-6 mx-auto border rounded p-0">
-              <p>My Crazy Dog Spark!</p>
-              <p class="justify-content-end">8/26</p> 
-              <img src="https://cdn.pixabay.com/photo/2016/09/18/20/47/football-1678992_1280.jpg" class="img-fluid" alt="Responsive image"> 
-              <p class="card-text">With supporting text below as a natural lead-in to additional content</p>
-              <h5 class="card-title">Special title treatment</h5>
+                <div class="d-flex p-2">
+                    <div class="w-100 fs4">"The teachers, their faces... that was something you don't forget."</div>
+                    <small class="align-bottom"><strong>08/26</strong></small>
+                </div>
+                <img src="https://images.unsplash.com/photo-1708798477023-e60bb59badd6?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="Tu"> 
+                <div class="p-2">
+                    <p class="card-text">Hours before a gunman stepped foot inside Robb Elementary School, a Uvalde grandmother was celebrating. She had a job interview and was hired on the spot.</p>
+                    <strong>4,000 Likes</strong>
+                </div>
+            </div>
+            <div class="col-6 mx-auto border rounded p-0">
+                <div class="d-flex p-2">
+                    <div class="w-100 fs4">NASA Anuncia el Lanzamiento de la Misión Artemis II</div>
+                    <small class="align-bottom"><strong>09/17</strong></small>
+
+                </div>
+                <img src="https://images.unsplash.com/32/RgJQ82pETlKd0B7QzcJO_5912578701_92397ba76c_b.jpg?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid w-100" alt="Bien"> 
+                <div class="p-2">
+                    <p class="card-text">La NASA ha anunciado que la misión Artemis II está programada para lanzarse en noviembre de 2024. Esta misión es la segunda etapa del programa Artemis, cuyo objetivo es regresar a los humanos a la Luna y establecer una presencia sostenible allí.</p>
+                    <strong>1,456 Likes</strong>
+                </div>
+            </div>
+            <div class="col-6 mx-auto border rounded p-0">
+                <div class="d-flex p-2">
+                    <div class="w-100 fs4">Google Unveils New AI-Powered Search Features</div>
+                    <small class="align-bottom"><strong>19/10</strong></small>
+                </div>
+                <img style="height: 30vw; object-fit: cover;" src="https://static.wikia.nocookie.net/kpop/images/5/5b/BLACKPINK_%22Shut_Down%22_group_promotional_photo.png/revision/latest?cb=20230212214710" class="img-fluid w-100" alt="">
+                <div class="p-2">
+                    <p class="card-text">Google has introduced several new features for its search engine that leverage artificial intelligence (AI) to enhance user experience. These updates, announced at a recent tech conference, include advanced natural language processing capabilities and improved contextual understanding.</p>
+                    <strong>204 Likes</strong>
+                </div>
+            </div>
+            <div class="col-6 mx-auto border rounded p-0">
+                <div class="d-flex p-2">
+                    <div class="w-100 fs4">GTA radio is always entertaining</div>
+                    <small class="align-bottom"><strong>20/47</strong></small>
+                </div>
+                <img style="height: 30vw; object-fit: cover;" src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_1200/https://www.smscountry.com/blog/wp-content/uploads/2023/04/SMS-35.jpg" alt="">
+                <div class="p-2">
+                    <p class="card-text">The current home page looks like an expired domain swept up by adbots, but that's actually part of the website, and you can get to the weird bits you mention</p>
+                    <strong>1,000.00 Likes</strong>
+                </div>
             </div>
         </div>
     </div>
- </div>
 
-
-<div class="tab-pane fade overflow-hidden active show" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
-    <div class="row">
-       <div class="col-6 mx-auto border rounded p-0">
-          <p>My Crazy Dog Spark!</p>
-          <p class="justify-content-end">8/26</p> 
-          <img src="https://cdn.pixabay.com/photo/2016/09/18/20/47/football-1678992_1280.jpg" class="img-fluid" alt="Responsive image"> 
-         <p class="card-text">This is an example of a very good photo that you can post on instagram</p>
-         <h5 class="card-title">204 Likes</h5>
-       </div>
-    </div>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
